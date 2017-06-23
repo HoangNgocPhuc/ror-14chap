@@ -33,3 +33,12 @@ en:
     new:
       sign_up: "Sign up"
       introduce: "This will be a signup page for new users."
+      confirmation: "Confirmation"
+      create: "Create my account"
+    create:
+      success: "Welcome to the Sample App!"
+      danger: "Fail create"
+  shared:
+    error_messages:
+      error_content: "The form contains "
+      error: "error"
