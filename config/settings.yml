@@ -1,4 +1,5 @@
 gravatar:
+  size1: 50
   size2: 80
 name:
   maximum: 50

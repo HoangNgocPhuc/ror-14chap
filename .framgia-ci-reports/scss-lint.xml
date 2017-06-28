@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="1.5.6">
+  <file name="/home/phuchoang/Desktop/sample_app1/app/assets/stylesheets/application.css">
+    <error source="Comment" line="1" column="1" length="3" severity="warning" message="Use `//` comments everywhere" />
+  </file>
+  <file name="/home/phuchoang/Desktop/sample_app1/app/assets/stylesheets/color.scss">
+    <error source="ColorKeyword" line="2" column="9" length="5" severity="warning" message="Color `white` should be written in hexadecimal form as `#ffffff`" />
+    <error source="ColorKeyword" line="3" column="7" length="3" severity="warning" message="Color `red` should be written in hexadecimal form as `#ff0000`" />
+  </file>
+  <file name="/home/phuchoang/Desktop/sample_app1/app/assets/stylesheets/custom.scss">
+    <error source="ImportPath" line="3" column="9" length="12" severity="warning" message="Imported partial `color.scss` should be written as `color`" />
+    <error source="VendorPrefix" line="101" column="3" length="27" severity="warning" message="Avoid vendor prefixes." />
+    <error source="VendorPrefix" line="102" column="3" length="30" severity="warning" message="Avoid vendor prefixes." />
+    <error source="QualifyingElement" line="116" column="1" length="1" severity="warning" message="Avoid qualifying class selectors with an element." />
+    <error source="MergeableSelector" line="120" column="1" length="1" severity="warning" message="Merge rule `section` with rule on line 116" />
+    <error source="ZeroUnit" line="139" column="19" length="3" severity="warning" message="`0px` should be written without units as `0`" />
+    <error source="ImportantRule" line="165" column="3" length="23" severity="warning" message="!important should not be used" />
+    <error source="PlaceholderInExtend" line="178" column="3" length="18" severity="warning" message="Prefer using placeholder selectors (e.g. %some-placeholder) with @extend" />
+  </file>
+</checkstyle>

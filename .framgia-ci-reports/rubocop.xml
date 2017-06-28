@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<checkstyle>
+  <file name='app/channels/application_cable/connection.rb'/>
+  <file name='app/channels/application_cable/channel.rb'/>
+  <file name='app/mailers/application_mailer.rb'>
+    <error line='2' column='16' severity='info' message='Prefer double-quoted strings unless you need single quotes to avoid extra backslashes for escaping.' source='com.puppycrawl.tools.checkstyle.Style/StringLiterals'/>
+    <error line='3' column='9' severity='info' message='Prefer double-quoted strings unless you need single quotes to avoid extra backslashes for escaping.' source='com.puppycrawl.tools.checkstyle.Style/StringLiterals'/>
+  </file>
+  <file name='app/helpers/users_helper.rb'>
+    <error line='3' column='29' severity='info' message='Do not use `::` for method calls.' source='com.puppycrawl.tools.checkstyle.Style/ColonMethodCall'/>
+  </file>
+  <file name='app/helpers/sessions_helper.rb'/>
+  <file name='app/helpers/application_helper.rb'/>
+  <file name='app/controllers/users_controller.rb'/>
+  <file name='app/controllers/application_controller.rb'/>
+  <file name='app/controllers/static_pages_controller.rb'/>
+  <file name='app/controllers/sessions_controller.rb'/>
+  <file name='app/models/user.rb'>
+    <error line='2' column='13' severity='info' message='Space detected to the left of {.' source='com.puppycrawl.tools.checkstyle.Style/SpaceBeforeBlockBraces'/>
+    <error line='13' column='6' severity='info' message='Use `self.digest` instead of `User.digest`.' source='com.puppycrawl.tools.checkstyle.Style/ClassMethods'/>
+    <error line='14' column='11' severity='info' message='Avoid multi-line ?: (the ternary operator); use `if`/`unless` instead.' source='com.puppycrawl.tools.checkstyle.Style/MultilineTernaryOperator'/>
+  </file>
+  <file name='app/models/application_record.rb'/>
+  <file name='app/jobs/application_job.rb'/>
+</checkstyle>

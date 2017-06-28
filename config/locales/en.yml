@@ -35,6 +35,10 @@ en:
     help:
       help: "Help"
   users:
+    index:
+      all_user: "All users"
+    user:
+      confirm_delete: "Are you ok?"
     new:
       sign_up: "Sign up"
       introduce: "This will be a signup page for new users."
@@ -43,6 +47,17 @@ en:
     create:
       success: "Welcome to the Sample App!"
       danger: "Fail create"
+    edit:
+      edit_user: "Edit user"
+      update: "Update your profile"
+      confirmation: "Confirmation"
+      save: "Save changes"
+      change_avatar: "Change"
+      pls_login: "Please log in"
+    update:
+      success_update: "Profile updated"
+    destroy:
+      success: "Success delete"
   shared:
     error_messages:
       error_content: "The form contains "
@@ -52,4 +67,6 @@ en:
       log_in: "Log in"
       sign_up: "Sign up now!"
       new_user: "New user?"
+      remember: "Remember me on this computer"
+    create:
       error_login: "Invalid email/password combination"
