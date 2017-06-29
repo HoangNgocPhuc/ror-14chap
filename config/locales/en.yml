@@ -15,6 +15,11 @@ en:
       home: "Home"
       help: "Help"
       log_in: "Log in"
+      users: "Users"
+      account: "Account"
+      profile: "Profile"
+      setting: "Settings"
+      logout: "Log out"
   static_pages:
     home:
       welcome: "Welcome to the Sample App"
@@ -42,3 +47,9 @@ en:
     error_messages:
       error_content: "The form contains "
       error: "error"
+  sessions:
+    new:
+      log_in: "Log in"
+      sign_up: "Sign up now!"
+      new_user: "New user?"
+      error_login: "Invalid email/password combination"
