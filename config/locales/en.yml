@@ -53,3 +53,6 @@ en:
       sign_up: "Sign up now!"
       new_user: "New user?"
       error_login: "Invalid email/password combination"
+      remember: "Remember me on this computer"
+    create:
+      error_login: "Invalid email/password combination"

@@ -1,6 +1,6 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-@import 'color.scss';
+@import 'color';
 
 body {
   padding-top: 60px;
@@ -180,4 +180,18 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin: -10px 0 10px;
+
+  span {
+    font-weight: normal;
+    margin-left: 20px;
+  }
+}
+
+.session-remember-me {
+  margin-left: 0px;
+  width: auto;
 }
