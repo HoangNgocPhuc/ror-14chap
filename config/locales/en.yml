@@ -35,14 +35,30 @@ en:
     help:
       help: "Help"
   users:
+    index:
+      all_user: "All user"
+    user:
+      confirm: "Are you sure?"
     new:
       sign_up: "Sign up"
       introduce: "This will be a signup page for new users."
       confirmation: "Confirmation"
       create: "Create my account"
+      change_avatar: "Change"
     create:
       success: "Welcome to the Sample App!"
       danger: "Fail create"
+    edit:
+      edit_user: "Edit user"
+      update_user: "Update your profile"
+      change_avatar: "Change"
+      pls_login: "Please log in."
+      save: "Save"
+    update:
+      update_success: "Update success"
+    destroy:
+      delete_success: "Delete success"
+      delete_lost: "Error delete"
   shared:
     error_messages:
       error_content: "The form contains "
