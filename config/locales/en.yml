@@ -28,6 +28,7 @@ en:
       sample: "sample application"
       sign_up: "Sign up now!"
       logo: "Rails logo"
+      micropost_feed: Micropost Feed
     about:
       about: "About"
     contact:
@@ -39,6 +40,7 @@ en:
       all_user: "All user"
     user:
       confirm: "Are you sure?"
+      view_profile: "view my profile"
     new:
       sign_up: "Sign up"
       introduce: "This will be a signup page for new users."
@@ -109,3 +111,39 @@ en:
   mailer:
     password_reset:
       expired_time: "Password reset has expired."
+  errors:
+    messages:
+      carrierwave_processing_error: failed to be processed
+      carrierwave_integrity_error: is not of an allowed file type
+      carrierwave_download_error: could not be downloaded
+      extension_white_list_error: "You are not allowed to upload %{extension}
+        files, allowed types: %{allowed_types}"
+      extension_black_list_error: "You are not allowed to upload %{extension}
+        files, prohibited types: %{prohibited_types}"
+      rmagick_processing_error: "Failed to manipulate with rmagick, maybe it is
+        not an image? Original Error: %{e}"
+      mime_types_processing_error: "Failed to process file with MIME::Types,
+        maybe not valid content-type? Original Error: %{e}"
+      mini_magick_processing_error: "Failed to manipulate with MiniMagick,
+        maybe it is not an image? Original Error: %{e}"
+  applications:
+    logged_in_user:
+      pls_login: "Please log in."
+  microposts:
+    create:
+      create_success: "Micropost created!"
+    destroy:
+      delete_success: "Micropost deleted"
+      title: "Delete"
+      confirm_delete: "Are you sure ?"
+      delete_fail: "Fail delete"
+    micropost_form:
+      placeholder: "Compose new micropost..."
+      submit: "Post"
+      micropost: "micropost"
+    model:
+      picture_warning: "should be less than 5MB"
+      error_picture: "Maximum file size is 5MB. Please choose a smaller file."
+  times_ago:
+    posted: "Posted"
+    ago: "ago"
