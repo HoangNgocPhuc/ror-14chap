@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user
+  before_action :logged_in_user, except: [:new, :create]
   before_action :load_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
   before_action :verify_admin, only: :destroy
 
   def index
-    @users = User.select(:id, :name, :email).order(:name).paginate page: params[:page],
+    @users = User.sort.paginate page: params[:page],
       per_page: Settings.user.per_page
   end
 
@@ -17,9 +17,9 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      log_in @user
-      flash.now[:success] = t ".success"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t ".check_email"
+      redirect_to root_url
     else
       flash.now[:danger] = t ".danger"
       render :new
@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    redirect_to root_url unless @user.activated
   end
 
   def edit
