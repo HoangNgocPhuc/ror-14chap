@@ -15,8 +15,9 @@
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
-<br>
-<div class="gravatar_edit">
-  <%= gravatar_for @user %>
-  <%= link_to t(".change_avatar"), "http://gravatar.com/emails", target: "_blank" %>
-</div>
+<% if current_user.present? %>
+  <div class="gravatar-edit">
+    <%= gravatar_for @user %>
+    <%= link_to t(".change_avatar"), "http://gravatar.com/emails", target: "_blank" %>
+  </div>
+<% end %>

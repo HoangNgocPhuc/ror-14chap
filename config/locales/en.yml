@@ -48,6 +48,9 @@ en:
     create:
       success: "Welcome to the Sample App!"
       danger: "Fail create"
+      check_email: "Please check your email to activate your account."
+    show:
+      pls_login: "Please log in."
     edit:
       edit_user: "Edit user"
       update_user: "Update your profile"
@@ -72,3 +75,15 @@ en:
       remember: "Remember me on this computer"
     create:
       error_login: "Invalid email/password combination"
+      message: "Account not activated.Check your email for the activation link."
+  account_activations:
+    edit:
+      success: "Account activated!"
+      invalid: "Invalid activation link"
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+      activate: "Activate"
+    password_reset:
+      greeting: "Hi"
+      mail_to: "to@example.org"
