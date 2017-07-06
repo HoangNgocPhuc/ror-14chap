@@ -73,6 +73,7 @@ en:
       new_user: "New user?"
       error_login: "Invalid email/password combination"
       remember: "Remember me on this computer"
+      forgot_password: "Forgot password"
     create:
       error_login: "Invalid email/password combination"
       message: "Account not activated.Check your email for the activation link."
@@ -87,3 +88,24 @@ en:
     password_reset:
       greeting: "Hi"
       mail_to: "to@example.org"
+      subject: "Password reset"
+      title: "Password reset"
+      instruction: "To reset your password click the link below:"
+      reset_password: "Reset password"
+  password_resets:
+    new:
+      forgot_password: "Forgot password"
+      submit: "Submit"
+    create:
+      noti_send_to_mail: "Email sent with password reset instructions"
+      not_found_mail: "Email address not found"
+    edit:
+      reset_password: "Reset password"
+      confirm: "Confirmation"
+      update_password: "Update password"
+    update:
+      error_empty: "can't be empty"
+      reset_success: "Password has been reset."
+  mailer:
+    password_reset:
+      expired_time: "Password reset has expired."
