@@ -1,8 +1,10 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
+
   attr_accessor :remember_token, :activation_token, :reset_token
 
   scope :sort, ->{order(name: :asc).where(activated: true)
-    .select(:id, :name, :email)}
+    .select :id, :name, :email}
 
   before_save :downcase_email
   before_create :create_activation_digest
@@ -67,6 +69,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.user.hour_expired.hours.ago
+  end
+
+  def feed
+    Micropost.select_item id
   end
 
   private

@@ -28,6 +28,8 @@ class UsersController < ApplicationController
 
   def show
     redirect_to root_url unless @user.activated
+    @microposts = @user.microposts.sort_by_create.paginate page: params[:page],
+      per_page: Settings.micropost.per_page
   end
 
   def edit

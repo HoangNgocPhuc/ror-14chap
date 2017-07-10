@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "static_pages#show", page: "home"
+  root "static_pages#home"
   get "static_pages/*page", to: "static_pages#show"
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   resources :account_activations, only: :edit
   resources :password_resets, except: :show
+  resources :microposts, only: [:create, :destroy]
 end
