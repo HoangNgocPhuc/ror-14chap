@@ -23,6 +23,28 @@
         <% else %>
           <li><%= link_to t(".log_in"), login_path %></li>
         <% end %>
+        <li>
+          <% if I18n.locale == :en %>
+            <%= image_tag("en.png", class: "set-image-locale") %>
+          <% else %>
+            <%= image_tag("vn.jpg", class: "set-image-locale") %>
+          <% end %>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <%= link_to image_tag("en.png"), en_set_languages_path,
+                  class: "set-image" %>
+              </li>
+              <li>
+                <%= link_to image_tag("vn.jpg"), vn_set_languages_path,
+                  class: "set-image"%>
+              </li>
+            </ul>
+          </li>
       </ul>
     </nav>
   </div>

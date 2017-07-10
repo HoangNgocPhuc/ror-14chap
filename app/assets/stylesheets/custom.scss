@@ -206,3 +206,18 @@ input {
     padding: 10px 0;
   }
 }
+
+.set-image-locale {
+    height: 16px;
+    width: 16px;
+    margin-top: 14px;
+  }
+
+.dropdown-menu{
+  min-width: 0px;
+
+  .set-image img {
+    height: 20px;
+    width: 20px;
+  }
+}
