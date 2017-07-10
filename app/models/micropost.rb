@@ -2,7 +2,7 @@ class Micropost < ApplicationRecord
   belongs_to :user
 
   scope :select_item, -> id{where "user_id = ?", id}
-  scope :sort_by_create, ->{order created_at: :desc}
+  scope :sort_by_time, ->{order created_at: :desc}
 
   mount_uploader :picture, PictureUploader
 

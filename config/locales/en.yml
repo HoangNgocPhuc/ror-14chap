@@ -64,6 +64,14 @@ en:
     destroy:
       delete_success: "Delete success"
       delete_lost: "Error delete"
+    following:
+      title: "Following"
+      following: "following: %{count}"
+      follow: "Follow"
+      unfollow: "Unfollow"
+    followers:
+      title: "Followers"
+      followers: "followers: %{count}"
   shared:
     error_messages:
       error_content: "The form contains "
