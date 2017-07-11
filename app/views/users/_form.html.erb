@@ -1,4 +1,4 @@
-<%= form_for @user do |f| %>
+<%= form_for user do |f| %>
   <%= render "shared/error_messages" %>
 
   <%= f.label :name %>
@@ -17,7 +17,7 @@
 <% end %>
 <% if current_user.present? %>
   <div class="gravatar-edit">
-    <%= gravatar_for @user %>
+    <%= gravatar_for user %>
     <%= link_to t(".change_avatar"), "http://gravatar.com/emails", target: "_blank" %>
   </div>
 <% end %>

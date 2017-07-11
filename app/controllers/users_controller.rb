@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def show
     redirect_to root_url unless @user.activated
-    @microposts = @user.microposts.sort_by_create.paginate page: params[:page],
+    @microposts = @user.microposts.sort_by_time.paginate page: params[:page],
       per_page: Settings.micropost.per_page
   end
 
@@ -51,6 +51,22 @@ class UsersController < ApplicationController
       flash[:warning] = t ".delete_lost"
     end
     redirect_to users_url
+  end
+
+  def following
+    @title = t "users.following.title"
+    @user  = User.find_by id: params[:id]
+    @users = @user.following.paginate page: params[:page],
+      per_page: Settings.user.per_page
+    render :show_follow
+  end
+
+  def followers
+    @title = t "users.followers.title"
+    @user  = User.find_by id: params[:id]
+    @users = @user.followers.paginate page: params[:page],
+      per_page: Settings.user.per_page
+    render :show_follow
   end
 
   private

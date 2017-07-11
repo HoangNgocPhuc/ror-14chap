@@ -1,0 +1,7 @@
+<% user ||= current_user %>
+<div class="stats">
+  <%= link_to (t "users.following.following", count: user.following.size),
+    following_user_path(user) %>
+  <%= link_to (t "users.followers.followers", count: user.followers.size),
+    followers_user_path(user), id: "followers" %>
+</div>

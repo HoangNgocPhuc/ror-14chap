@@ -1,6 +1,7 @@
 gravatar:
   size1: 50
   size2: 80
+  size3: 30
 name:
   maximum: 50
 email:
