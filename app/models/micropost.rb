@@ -1,7 +1,8 @@
 class Micropost < ApplicationRecord
   belongs_to :user
+  has_many :comments, dependent: :destroy
 
-  scope :select_item, -> id{where "user_id = ?", id}
+  scope :select_item, lambda {|following_ids| where :user_id => following_ids}
   scope :sort_by_time, ->{order created_at: :desc}
 
   mount_uploader :picture, PictureUploader
@@ -9,6 +10,7 @@ class Micropost < ApplicationRecord
   validates :user, presence: true
   validates :content, presence: true,
     length: {maximum: Settings.micropost.content.maximum}
+  validates :title, presence: true
   validate :picture_size
 
   private

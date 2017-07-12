@@ -1,0 +1,8 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".all_post" %></h1>
+
+<%= will_paginate @microposts %>
+<ul class="microposts">
+  <%= render @microposts %>
+</ul>
+<%= will_paginate @microposts %>

@@ -13,6 +13,12 @@ Rails.application.routes.draw do
   end
   resources :account_activations, only: :edit
   resources :password_resets, except: :show
-  resources :microposts, only: [:create, :destroy]
+  resources :microposts, only: [:index, :create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :comments
+  resources :set_languages do
+    collection do
+      get :en, :vn
+    end
+  end
 end

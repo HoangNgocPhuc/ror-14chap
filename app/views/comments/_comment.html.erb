@@ -1,0 +1,25 @@
+<div class="row row-comment" data-id="<%= comment.id %>">
+  <div class="col-md-1 col-md-offset-1">
+    <%= link_to gravatar_for(comment.user, size: Settings.gravatar.size1), comment.user %>
+  </div>
+  <div class="col-md-10">
+    <div>
+      <%= link_to comment.user.name, comment.user %>
+      <% if comment.belong_to_user current_user %>
+        <%= link_to t("comments.comment.delete"), comment, method: :delete,
+          data: {confirm: t("comments.comment.confirm")}, remote: true,
+          class: "delete_comment btn btn-danger" %>
+        <%= link_to t("comments.comment.edit"), edit_comment_path(comment), remote: true,
+          class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <div class="text-time-ago">
+      <%= t "times_ago.posted" %>
+      <%= time_ago_in_words comment.created_at %>
+      <%= t "times_ago.ago" %>
+    </div>
+    <div class="content-comment", data-id="<%= comment.id %>">
+      <%= comment.content %>
+    </div>
+  </div>
+</div>

@@ -20,6 +20,7 @@ en:
       profile: "Profile"
       setting: "Settings"
       logout: "Log out"
+      posts: "Posts"
   static_pages:
     home:
       welcome: "Welcome to the Sample App"
@@ -41,6 +42,7 @@ en:
     user:
       confirm: "Are you sure?"
       view_profile: "view my profile"
+      delete: "Delete"
     new:
       sign_up: "Sign up"
       introduce: "This will be a signup page for new users."
@@ -138,6 +140,9 @@ en:
     logged_in_user:
       pls_login: "Please log in."
   microposts:
+    index:
+      title: "Posts"
+      all_post: "All posts"
     create:
       create_success: "Micropost created!"
     destroy:
@@ -146,7 +151,8 @@ en:
       confirm_delete: "Are you sure ?"
       delete_fail: "Fail delete"
     micropost_form:
-      placeholder: "Compose new micropost..."
+      placeholder: "Content new micropost..."
+      placeholder_title: "Add title"
       submit: "Post"
       micropost: "micropost"
     model:
@@ -155,3 +161,10 @@ en:
   times_ago:
     posted: "Posted"
     ago: "ago"
+  comments:
+    form:
+      placeholder: "Comments"
+    comment:
+      delete: "Delete"
+      edit: "Edit"
+      confirm: "Are you sure ?"

@@ -1,0 +1,112 @@
+vn:
+  hello: "Hello world"
+  base_title: "Ruby on Rails Tutorial Sample App"
+  layouts:
+    footer:
+      the: "The"
+      ror: "Ruby on Rails Tutorial"
+      by: "by"
+      author: "Michael Hartl"
+      contact: "Liên hệ"
+      news: "Sách"
+      contact: "Liên hệ"
+    header:
+      sample_app: "sample app"
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      log_in: "Đăng nhập"
+      users: "Các Tài khoản"
+      account: "Tài khoản"
+      profile: "Trang cá nhân"
+      setting: "Cài đặt"
+      logout: "Đăng xuất"
+      posts: "Bài viết"
+  static_pages:
+    home:
+      welcome: "Chào mừng đến với Sample App"
+      introduce: "Đây là trang chủ"
+      ror: "Ruby on Rails Tutorial"
+      sample: "sample application"
+      sign_up: "Đăng ký ngay!"
+      logo: "Rails logo"
+    about:
+      about: "Về"
+    contact:
+      contact: "Liên hệ"
+    help:
+      help: "Trợ giúp"
+  users:
+    index:
+      all_user: "Tất cả user"
+    user:
+      confirm: "Bạn có chắc?"
+    new:
+      sign_up: "Đăng ký"
+      introduce: "This will be a signup page for new users."
+      confirmation: "Xác nhận"
+      create: "Tạo tài khoản"
+      change_avatar: "Thay đổi"
+    create:
+      success: "Welcome to the Sample App!"
+      danger: "Tạo tài khoản bị lỗi"
+      check_email: "Làm ơn truy cập email của bạn và active tài khoản"
+    show:
+      pls_login: "Làm ơn đăng nhập."
+    edit:
+      edit_user: "Chỉnh sửa tài khoản"
+      update_user: "Cập nhập thông tin cá nhân"
+      change_avatar: "Thay đổi"
+      pls_login: "Làm ơn đăng nhập."
+      save: "Lưu"
+    update:
+      update_success: "Cập nhập thành công"
+    destroy:
+      delete_success: "Xóa thành công"
+      delete_lost: "Xóa lỗi"
+  shared:
+    error_messages:
+      error_content: "The form contains "
+      error: "error"
+  sessions:
+    new:
+      log_in: "Đăng nhập"
+      sign_up: "Đăng ký ngay!"
+      new_user: "New user?"
+      error_login: "Invalid email/password combination"
+      remember: "Remember me on this computer"
+      forgot_password: "Forgot password"
+    create:
+      error_login: "Invalid email/password combination"
+      message: "Account not activated.Check your email for the activation link."
+  account_activations:
+    edit:
+      success: "Account activated!"
+      invalid: "Invalid activation link"
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+      activate: "Activate"
+    password_reset:
+      greeting: "Hi"
+      mail_to: "to@example.org"
+      subject: "Password reset"
+      title: "Password reset"
+      instruction: "To reset your password click the link below:"
+      reset_password: "Reset password"
+  password_resets:
+    new:
+      forgot_password: "Forgot password"
+      submit: "Submit"
+    create:
+      noti_send_to_mail: "Email sent with password reset instructions"
+      not_found_mail: "Email address not found"
+    edit:
+      reset_password: "Reset password"
+      confirm: "Confirmation"
+      update_password: "Update password"
+    update:
+      error_empty: "can't be empty"
+      reset_success: "Password has been reset."
+  mailer:
+    password_reset:
+      expired_time: "Password reset has expired."

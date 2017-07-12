@@ -2,7 +2,7 @@ User.create! name: "Phuc", email: "phuc@gmail.com", password: "123456",
   password_confirmation: "123456", admin: true, activated: true,
   activated_at: Time.zone.now
 
-20.times do |n|
+9.times do |n|
   name = Faker::Name.name
   email = "#{n+1}@gmail.com"
   password = "123456"
@@ -12,14 +12,15 @@ User.create! name: "Phuc", email: "phuc@gmail.com", password: "123456",
 end
 
 users = User.order :created_at
-20.times do
+9.times do
   content = Faker::Lorem.sentence 5
-  users.each{|user| user.microposts.create! content: content}
+  title = Faker::Lorem.sentence 3
+  users.each{|user| user.microposts.create! content: content, title: title}
 end
 
 users = User.all
 user  = users.first
-following = users[2..18]
-followers = users[3..18]
+following = users[2..8]
+followers = users[3..7]
 following.each{|followed| user.follow followed}
 followers.each{|follower| follower.follow user}

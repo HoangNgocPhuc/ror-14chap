@@ -1,11 +1,15 @@
 <%= form_for @micropost, html: {data: {maximum: Settings.micropost.picture.maximum}} do |f| %>
   <%= render "shared/error_messages", object: f.object %>
   <div class="field">
+    <%= f.text_field :title, class: "form-control",
+      placeholder: t("microposts.micropost_form.placeholder_title") %>
+  </div>
+  <div class="field">
     <%= f.text_area :content,
       placeholder: t("microposts.micropost_form.placeholder") %>
   </div>
-  <%= f.submit t("microposts.micropost_form.submit"), class: "btn btn-primary" %>
   <span class="picture">
     <%= f.file_field :picture, accept: Settings.image_upload.type %>
   </span>
+  <%= f.submit t("microposts.micropost_form.submit"), class: "btn btn-primary" %>
 <% end %>

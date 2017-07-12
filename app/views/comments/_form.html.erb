@@ -1,0 +1,20 @@
+<%= form_for micropost.comments.build, remote: true do |f| %>
+  <%= hidden_field_tag "micropost_id", micropost.id %>
+  <div class="row">
+    <div class="col-md-1 col-md-offset-1">
+      <%= link_to gravatar_for(user, size: Settings.gravatar.size1), user %>
+    </div>
+    <div class="col-md-10">
+      <div>
+        <%= link_to user.name, user %>
+      </div>
+      <div>
+        <%= f.text_field :content,
+          placeholder: t("comments.form.placeholder"),
+          class: "form-control" %>
+      </div>
+    </div>
+    <%= f.submit t("microposts.micropost_form.submit"),
+      class: "btn btn-primary hidden-submit" %>
+  </div>
+<% end %>
