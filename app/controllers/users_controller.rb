@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, except: [:new, :create]
+  before_action :logged_in_user, only: [:edit, :update]
   before_action :load_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
   before_action :verify_admin, only: :destroy
@@ -30,6 +30,7 @@ class UsersController < ApplicationController
     redirect_to root_url unless @user.activated
     @microposts = @user.microposts.sort_by_time.paginate page: params[:page],
       per_page: Settings.micropost.per_page
+    @comment = Comment.new
   end
 
   def edit

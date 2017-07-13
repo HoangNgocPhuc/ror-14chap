@@ -6,11 +6,13 @@ class User < ApplicationRecord
     foreign_key: :followed_id, dependent: :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :comments, dependent: :destroy
 
   attr_accessor :remember_token, :activation_token, :reset_token
 
   scope :sort, ->{order(name: :asc).where(activated: true)
     .select :id, :name, :email}
+  scope :select_item, ->{select :id}
 
   before_save :downcase_email
   before_create :create_activation_digest
@@ -78,7 +80,8 @@ class User < ApplicationRecord
   end
 
   def feed
-    Micropost.sort_by_time.select_item id, following_ids
+    following_ids = self.following.select_item
+    Micropost.sort_by_time.select_item following_ids
   end
 
   def follow other_user
