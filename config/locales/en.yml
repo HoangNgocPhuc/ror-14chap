@@ -168,3 +168,9 @@ en:
       delete: "Delete"
       edit: "Edit"
       confirm: "Are you sure ?"
+    create:
+      danger: "Fail create"
+    update:
+      update_lost: "Error update"
+    destroy:
+      delete_lost: "Error delete"

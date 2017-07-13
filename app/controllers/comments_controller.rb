@@ -4,13 +4,16 @@ class CommentsController < ApplicationController
 
   def create
     @micropost = Micropost.find_by id: params[:micropost_id]
-    @comment = @micropost.comments.create comment_params
+    @comment = @micropost.comments.new comment_params
     @comment.user_id = current_user.id
     if @comment.save
       respond_to do |format|
         format.html {redirect_to :back}
         format.js
       end
+    else
+      flash[:danger] = t ".danger"
+      redirect_to root_url
     end
   end
 
@@ -28,6 +31,9 @@ class CommentsController < ApplicationController
         format.html {redirect_to :back}
         format.js
       end
+    else
+      flash[:warning] = t ".update_lost"
+      redirect_to root_url
     end
   end
 
@@ -38,13 +44,16 @@ class CommentsController < ApplicationController
         format.html {redirect_to :back}
         format.js
       end
+    else
+      flash[:warning] = t "delete_lost"
+      redirect_to root_url
     end
   end
 
   private
 
   def correct_user
-    redirect_to root_url if !@comment.belong_to_user current_user
+    redirect_to root_url if !@comment.user.current_user? current_user
   end
 
   def load_comment

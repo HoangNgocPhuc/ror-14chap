@@ -5,7 +5,7 @@
   <div class="col-md-10">
     <div>
       <%= link_to comment.user.name, comment.user %>
-      <% if comment.belong_to_user current_user %>
+      <% if comment.user.current_user? current_user %>
         <%= link_to t("comments.comment.delete"), comment, method: :delete,
           data: {confirm: t("comments.comment.confirm")}, remote: true,
           class: "delete_comment btn btn-danger" %>
